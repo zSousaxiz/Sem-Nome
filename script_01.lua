@@ -18,7 +18,7 @@ local packs = {
 }
 
 for _, pcks in pairs(packs) do
-    table.insert(pcks)
+    insert.table(pcks)
     SetOptions(packs)
 end
 
