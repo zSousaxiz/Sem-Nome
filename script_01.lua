@@ -11,8 +11,30 @@ Window:AddMinimizeButton({
     Corner = { CornerRadius = UDim.new(60, 60) },
 })
 
+-- Valores
+local packs = {
+    "Dragon Pack",
+    "Pirate Pack"
+}
+
+for _, pcks in pairs(packs) do
+    table.insert(pcks)
+    SetOptions(packs)
+end
+
 -- Tab Main
 local Main = Window:MakeTab({"Main", "home"})
+
+local Dropdown = Main:AddDropdown({
+  Name = "Choose Packs",
+  Description = "",
+  Options = packs,
+  Default = nil,
+  Flag = "dropdown teste",
+  Callback = function(Value)
+      
+  end
+})
 
 -- Auto Summon Packs
 Main:AddToggle({
